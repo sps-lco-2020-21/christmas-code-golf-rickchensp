@@ -1,16 +1,1 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-namespace A
-{
-    class A
-    {
-        static void Main()
-        {
-            List<string>n=new List<string>{ "\nTwo turtle doves,", "\nThree French hens", "\nFour calling birds", "\nFive golden rings", "\nSix geese a-laying", "\nSeven swans a-swimming", "\nEight maids a-milking", "\nNine ladies dancing", "\nTen lords a-leaping", "\nEleven pipers piping", "\nTwelve drummers drumming","first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth"};
-            for(int j=0;j<12;++j)        
-                Console.Write("On the {0} day of Christmas,\nmy true love sent to me{1}\nA{2} partridge in a pear tree.\n\n",n[11].Split().ToList()[j],string.Join(",",n.Take(j).Reverse()),j==0?"":"nd a");   
-            Console.ReadKey();
-        }
-    }
-}
+﻿using System;using System.Collections.Generic;using System.Linq;namespace A{class A{static void Main(){List<string>n=new List<string>{"first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth","\nTwelve drummers drumming","\nEleven pipers piping","\nTen lords a-leaping","\nNine ladies dancing","\nEight maids a-milking","\nSeven swans a-swimming","\nSix geese a-laying","\nFive golden rings","\nFour calling birds","\nThree French hens","\nTwo turtle doves,"};for(int j=0;j<12;++j)Console.Write("On the {0} day of Christmas,\nmy true love sent to me{1}\nA{2} partridge in a pear tree{3}\n\n",n[0].Split().ToList()[j],string.Join(",",n.Skip(12-j).Take(j)),j==0?"":"nd a",j==11?"!":".");}}}
